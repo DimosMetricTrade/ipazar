@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - iPazar</title>
+    <script>
+        function redirectToAppStore() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            if (/android/i.test(userAgent)) {
+                // Redirect to the Google Play Store
+                window.location.href = 'https://play.google.com/store/apps/details?id=com.metrictrade.t.zt&pli=1';
+            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                // Redirect to the Apple App Store
+                window.location.href = 'https://apps.apple.com/us/app/ztrade-plus/id786146883';
+            } else {
+                // Optionally, handle other cases or provide a fallback
+                window.location.href = 'ms-windows-store://pdp/?ProductId=9P7R15NSPZ5P';
+            }
+        }
+
+        // Call the function on page load
+        window.onload = redirectToAppStore;
+    </script>
+</head>
+</html>

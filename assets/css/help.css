@@ -1,0 +1,779 @@
+/* Fonts */
+:root {
+    --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --heading-font: "Raleway",  sans-serif;
+    --nav-font: "Poppins",  sans-serif;
+  }
+  
+  /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+  :root { 
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #191919; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #cc1616; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+    --ipazar-color: #d01919;
+    --accent-color-hover: #971212;
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #ffffff;  /* The default color of the main navmenu links */
+    --nav-hover-color: #cc1616; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #cc1616; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+
+  /*--------------------------------------------------------------
+  # Global Sections
+  --------------------------------------------------------------*/
+  section,
+  .section {
+    color: var(--default-color);
+    background-color: var(--background-color);
+    padding: 60px 0;
+    scroll-margin-top: 100px;
+    overflow: clip;
+  }
+  
+  @media (max-width: 1199px) {
+  
+    section,
+    .section {
+      scroll-margin-top: 66px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+  # Global Section Titles
+  --------------------------------------------------------------*/
+  
+  .section-title {
+    text-align: center;
+    padding: 30px 10px;
+    margin-bottom: 30px;
+    position: relative;
+  }
+  
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .section-title span {
+    position: absolute;
+    top: 4px;
+    color: color-mix(in srgb, var(--heading-color), transparent 95%);
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-weight: 700;
+    font-size: 52px;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+  
+  .section-title p {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+  }
+  
+  @media (max-width: 575px) {
+    .section-title h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+  
+    .section-title span {
+      font-size: 38px;
+    }
+  }
+  
+.home{
+    background-color: var(--background-color);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.styled-image{
+    width: 1500px;
+    height:auto;
+}
+
+.image-with-text-container {
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 50px;
+    top: 30%;
+    left: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.fixed-image {
+    width: 400px; 
+    height: auto; 
+}
+
+.text-container {
+    max-width: 1700px;
+}
+
+.text-container h2 {
+    font-size: 5.5rem;
+    font-weight: normal;
+}
+
+.text-container p {
+    padding-left: 20px;
+    font-size:2rem;
+    color: #000000; 
+    text-align: left;
+}
+
+.text-container h5 {
+    padding-left: 20px;
+    font-size: 5.5rem;
+    text-decoration: underline;
+    color: #000000; 
+    text-align: left;
+    font-weight: normal;
+}
+@media (max-width: 2000px) {
+    .image-with-text-container {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .fixed-image {
+        width: 200px; 
+        height: auto; 
+        margin-top: 50px;
+    }
+    .text-container {
+        margin-top: 150px;
+        max-width: 2000px;
+    }
+    .styled-image{
+        width:1000px;
+        height:auto;
+    }
+    
+}
+
+@media (max-width: 1400px) {
+    .text-container p {
+        font-size:1.6rem;
+        color: #000000; 
+        text-align: left;
+    }
+    
+    .text-container h5 {
+        font-size: 4.5rem;
+        text-decoration: underline;
+        color: #000000; 
+        text-align: left;
+        font-weight: normal;
+    }
+    .styled-image{
+        width:500px;
+        height:auto;
+    }
+    .image-with-text-container {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 80%;
+        margin-bottom: 10px;
+        flex-direction: column; /* Stack items vertically for small screens */
+        align-items: flex-start; /* Align items to the start of the container */
+        text-align: center; /* Center text within the container */
+        left: 50%; /* Center the container horizontally */
+    }
+    .fixed-image {
+        width: 100px; 
+        height: auto; 
+        margin-top: 0px;
+        margin-right: 0px; /* Remove right margin on small screens */
+        margin-left: 0px; /* Remove right margin on small screens */
+        margin-bottom: 10px; /* Add bottom margin to separate image and text */
+    }
+    .text-container {
+        margin-right: 0px; /* Remove right margin on small screens */
+        margin-left: 0px; /* Remove right margin on small screens */
+        margin-top: 0px;
+        max-width: 100%; /* Take full width on small screens */
+    }
+}
+br {
+    display: block;
+    content: " ";
+    margin: 0.5em;
+  }
+  
+
+.home .text-column {
+    width: 70%;
+    padding: 20px;
+}
+.home h1{
+    color: #000000;
+    font-size: 5.5rem;
+    margin-top: 100px;
+    font-weight: normal;
+}
+
+.home h2{
+    color: var(--default-color);
+    font-size: 25px;
+    text-align: left;
+    font-weight: normal;
+    font-family: var(--default-font);
+}
+.home h3{
+    color: var(--default-color);
+    font-size: 20px;
+    text-align: left;
+    font-weight: normal;
+    font-family: var(--default-font);
+}
+
+.home h4{
+    color: #ffffff;
+    font-size: 20px;
+    text-align: left;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-family: var(--default-font);
+}
+.text-box {
+    padding: 10px; /* Add some padding */
+    max-width: 300px; /* Set a fixed width */
+    margin: 20px; /* Add some margin for spacing */
+}
+
+.expandable-box {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.expandable-box2 {
+    cursor: pointer;
+    background-color: var(--accent-color);
+    border-radius: 4px;
+    min-height: 30px;
+}
+
+.expanded-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s ease-out;
+    /* Add other styles as needed */
+}
+
+.exp-img{
+    width: 500px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
+@media (max-width: 1000px) {
+    .exp-img{
+        width: 300px;
+    }
+}
+
+.exp-img2{
+    width: 800px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+@media (max-width: 1000px) {
+    .exp-img2{
+        width: 350px;
+    }
+}
+
+.exp-img3{
+    width: 400px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 1px;
+}
+@media (max-width: 1000px) {
+    .exp-img3{
+        width: 300px;
+    }
+}
+
+.exp-img4{
+    width: 300px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+}
+@media (max-width: 1000px) {
+    .exp-img4{
+        width: 150px;
+    }
+}
+
+.exp-img5{
+    width: 400px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+.exp-img6{
+    width: 800px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-top: 50px;
+}
+
+.exp-img7{
+    width: 600px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-left: 50px;
+}
+
+.exp-img8{
+    width: 790px;
+    align-self: ceneter;
+    display: block;
+    margin: 0 auto;
+    border-radius: 2px;
+    margin-left: 50px;
+}
+
+@media (max-width: 1000px) {
+    .exp-img5{
+        width: 350px;
+    }
+    .exp-img7{
+        width: 300px;
+        margin-left: 0px;
+    }
+    .exp-img8{
+        margin-left: 0px;
+        width: 350px;
+    }
+}
+
+
+
+@media (max-width: 1000px) {
+    .exp-img6{
+        width: 150px;
+        margin-top: 0px;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.container2 {
+    display: flex;
+    align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+    .container2 {
+        display: flex;
+        align-items: center; /* Center items vertically */
+        flex-direction: column; /* Stack items vertically */
+      }
+}
+
+.content-container {
+    display: none;
+    margin-bottom: 20px;
+    transition: opacity 0.5s ease, height 0.5s ease;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    color: var(--background-color);
+}
+
+.button {
+    background-color: var(--background-color);
+    color: var(--default-color);
+    outline: none;
+    height: 50px;
+    width: 150px;
+    margin: 5px;
+    font-size: 20px;
+    border-radius: 8px; 
+    border: 2px solid var(--default-color);
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+}
+.button:focus {
+    outline: none;
+}
+
+@media (max-width: 1000px) {
+    .button-container {
+        display: flex;
+        flex-wrap: wrap; 
+    }
+}
+
+
+.button.active-button {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    border: none;
+}
+
+#div1 {
+    display: block; 
+}
+
+.empty-lines {
+    margin-bottom: 100px; /* Adjust the margin as needed */
+}
+
+.rounded-box {
+    padding: 20px;
+    width: 950px;
+    background-color: var(--surface-color);
+    padding: 60px 40px;
+    box-shadow: 0 3px 20px -2px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.rounded-box2 {
+    background-color: transparent; 
+    border-radius: 5px;     
+    padding: 20px;
+    color: #fff;
+    width: 1000px;
+    align-items: center;
+}
+.rounded-box3 {
+    background-color: transparent; 
+    border-radius: 5px;     
+    color: rgb(255, 255, 255);
+    width: 1000px;
+}
+
+
+@media (max-width: 1000px) {
+    .rounded-box {
+        width: 500px;
+    }
+    .rounded-box2 {
+
+        width: 500px;
+    }
+    .rounded-box3 {
+        width: 500px;
+    }
+
+}
+@media (max-width: 800px) {
+    .rounded-box {
+        width: 400px;
+    }
+    .rounded-box2 {
+        width: 400px;
+    }
+    .rounded-box3 {
+        width: 400px;
+    }
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around; /* Adjusted spacing */
+    flex-wrap: wrap; /* Added to allow wrapping on smaller screens */
+    margin-top: 30px;
+}
+
+.column {
+    flex: 0 1 calc(30% - 30px); /* Adjusted flex property and added calc to include margin */
+    text-align: left;
+    padding: 100px;
+    margin: 30px;
+}
+
+@media (max-width: 1500px) {
+    .column {
+        flex: 0 1 calc(100% - 20px); 
+        margin: 10px;
+        padding: 20px;
+    }
+}
+
+.rtd {
+    background-color: #2b3e50; 
+    padding-top: 120px;
+    text-align: center;
+
+}
+
+.rtd h1 {
+    color: #ffffff; 
+    font-size: 1.7rem;
+    font-weight: normal;
+    
+}
+
+.rtd h2 {
+    color: #ffffff; 
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.rtd h3 {
+    color: #ffffff; 
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: right;
+    padding-right: 20px;
+    font-weight: normal;
+}
+
+.rtd h4 {
+    color: #ffffff; 
+    font-size: 1.7rem;
+    font-weight: normal;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: normal;
+}
+
+.container-rtd {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center contents horizontally */
+}
+
+.container2-rtd {
+    justify-content: center; /* Center contents horizontally */
+}
+
+.container3-rtd {
+    display: flex;
+    justify-content: center; /* Center contents horizontally */
+    margin-bottom: 10px;
+}
+
+.box-rtd {
+    width: 1300px; 
+    background-color: #7b8185; 
+    align-self: center;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px;  
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box2-rtd {
+    width: 900px; 
+    background-color: #7b8185; 
+    align-self: center;
+    text-align: left;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 5px; 
+    padding: 20px; 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.box3-rtd {
+    width: 310px; 
+    background-color: #2b3e50; 
+    align-self: center;
+    display: flex;
+    border-width: 2px 2px 2px 0;
+    border-style: solid;
+    border-color:gray;
+    border-radius: 0 10px 10px 0;
+    margin-right: 10px;
+}
+
+.box4-rtd {
+    width: 310px; 
+    background-color: #2b3e50; 
+    align-self: center;
+    text-align: right;
+    border-width: 2px 0 2px 2px; 
+    border-style: solid;
+    border-color:gray;
+    border-radius: 10px 0 0 10px;  
+    margin-left: 10px;
+}
+
+.box5-rtd {
+    padding-top: 8px;
+    width: 100px; 
+    height: 50px;
+    /*background-color: #2b3e50; */
+    background-color: gray;
+    align-self: center;
+    display: flex;
+    border-width: 2px 0 2px 0; 
+    border-style: solid;
+    border-color:gray;
+    border-radius: 0 0 0 0;
+    text-align: center;
+}
+
+.box5-rtd h4 {
+    padding-left: 35px;
+    text-align: center !important;
+}
+
+.box6-rtd {
+    padding-top: 8px;
+    width: 260px; 
+    height: 50px;
+    background-color: #2b3e50; 
+    align-self: center;
+    text-align: right ;
+    border-width: 2px 0 2px 2px; 
+    border-style: solid;
+    border-color:gray;
+    border-radius: 10px 0 0 10px;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.box7-rtd {
+    padding-top: 8px;
+    width: 260px; 
+    height: 50px;
+    background-color: #2b3e50; 
+    align-self: center;
+    text-align: right ;
+    border-width: 2px 2px 2px 0; 
+    border-style: solid;
+    border-color:gray;
+    border-radius: 0 10px 10px 0;
+    align-items: center;
+    margin-right: 10px;
+}
+
+
+.long1-rtd{
+    width: 650px;
+    height: 5px;
+    background-color: #FF8C00;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.long2-rtd{
+    width: 440px;
+    height: 5px;
+    background-color: #FF8C00;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.long3-rtd{
+    width: 490px;
+    height: 5px;
+    background-color: #FF8C00;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.rtd a1{
+    color: white; 
+    text-decoration: underline;
+}
+ 
+.long1-dde{
+    width: 930px;
+    height: 5px;
+    background-color: #FF8C00;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.long2-dde{
+    width: 1200px;
+    height: 5px;
+    background-color: #FF8C00;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.title-box {
+    display: block;
+    padding: 20px 80px;
+}
+
+.container.section-title {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    text-align: center; /* Center text inside each element */
+    margin-top: 200px; /* Maintain the margin at the top */
+  }
+  
+  .container.section-title span,
+  .container.section-title h2,
+  .container.section-title p {
+    margin: 0; /* Remove default margins */
+    padding: 10px 0; /* Optional: Add spacing between elements */
+  }
+  
+  /* Additional styling for the section if needed */
+  .container.section-title h2 {
+    font-size: 2rem; /* Adjust as needed */
+  }
+  
+  .container.section-title p {
+    font-size: 1rem; /* Adjust as needed */
+  }
